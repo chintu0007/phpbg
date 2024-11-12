@@ -13,13 +13,23 @@
           </p>          
         </div>
        <?php endif; ?>
-       <?php foreach ($notes as $key => $value): ?>
-          <li>
-              <a href='/note?id=<?= $value["id"]?>' class="text-blue-500 hover:underline">
-                <?= $value['body']; ?>
-              </a>            
-          </li>
-       <?php endforeach; ?>
+       <?php 
+       if (!empty($notes)): 
+        foreach ($notes as $key => $value): ?>
+            <li>
+                <?php if(isset($_GET['id'])) : ?>
+                  <?= $value['body']; ?>
+                <?php else: ?>    
+                  <a href='/note?id=<?= $value["id"]?>' class="text-blue-500 hover:underline">
+                  <?= $value['body']; ?>
+                </a>  
+                <?php  endif; ?>
+            </li>
+        <?php endforeach; ?>
+       <?php  endif; ?>      
+        <?php  if (!empty($note)):  ?>
+            <p><?= $note['body']; ?></p>            
+        <?php  endif; ?>      
     </div>
   </main>
 
