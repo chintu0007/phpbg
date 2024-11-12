@@ -10,6 +10,7 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a href="/" class="rounded-md <?= urlIS('/') ? ' bg-gray-900 ' : ' hover:bg-gray-700 hover:text-white '; ?> px-3 py-2 text-sm font-medium text-white " aria-current="page">Home</a>
               <a href="/about" class="rounded-md <?= urlIS('/about') ? ' bg-gray-900 ' : ' hover:bg-gray-700 hover:text-white '; ?>  px-3 py-2 text-sm font-medium text-gray-300 ">About</a>
+              <a href="/notes" class="rounded-md <?= urlIS('/notes') ? ' bg-gray-900 ' : ' hover:bg-gray-700 hover:text-white '; ?>  px-3 py-2 text-sm font-medium text-gray-300 ">Notes</a>
               <a href="/contact" class="rounded-md <?= urlIS('/contact') ? ' bg-gray-900 ' : ' hover:bg-gray-700 hover:text-white '; ?> px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
              
             </div>
