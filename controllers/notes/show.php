@@ -5,7 +5,7 @@ $db = new Database($config['database']);
 
 
 $heading = "My Notes";
-$currentUserId = 3;
+$currentUserId = 1;
 
 //$notes = $db->query('SELECT * FROM `notes` WHERE id = :id', ['id' => $id])->fetchAll();
 $note = $db->query('SELECT * FROM `notes` WHERE id = :id', 
@@ -19,4 +19,4 @@ $note = $db->query('SELECT * FROM `notes` WHERE id = :id',
 
     authorize($note['user_id'] === $currentUserId);
 
-require 'view/notes.view.php';
+require 'view/notes/index.view.php';
