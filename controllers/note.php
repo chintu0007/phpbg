@@ -12,7 +12,7 @@ $note = $db->query('SELECT * FROM `notes` WHERE id = :id',
     [       
         'id' => $_GET['id']       
     ])
-    ->findOrFail();   
+    ->findOrFail();                     
     // if($note['user_id'] !== $currentUserId) {
     //     abort(Response::FORBIDDEN);
     // }
