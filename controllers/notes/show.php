@@ -1,22 +1,17 @@
-<?php 
+<?php
 
-$config = require('config.php');
+$config = require base_path('config.php');
 $db = new Database($config['database']);
 
-
-$heading = "My Notes";
 $currentUserId = 1;
 
-//$notes = $db->query('SELECT * FROM `notes` WHERE id = :id', ['id' => $id])->fetchAll();
-$note = $db->query('SELECT * FROM `notes` WHERE id = :id', 
-    [       
-        'id' => $_GET['id']       
-    ])
-    ->findOrFail();                     
-    // if($note['user_id'] !== $currentUserId) {
-    //     abort(Response::FORBIDDEN);
-    // }
+$note = $db->query('select * from notes where id = :id', [
+    'id' => $_GET['id']
+])->findOrFail();
 
-    authorize($note['user_id'] === $currentUserId);
+authorize($note['user_id'] === $currentUserId);
 
-require 'view/notes/index.view.php';
+view("notes/show.view.php", [
+    'heading' => 'Note',
+    'note' => $note
+]);
