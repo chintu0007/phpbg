@@ -1,5 +1,19 @@
 <?php
 
+
+/*echo "<pre>";
+print_r($_POST);
+echo "</pre>";
+
+echo "<pre>";
+print_r($_GET);
+echo "</pre>";
+
+echo "<pre>";
+print_r($_SERVER);
+echo "</pre>"; */
+
+
 $router->get('/', 'controllers/index.php');
 $router->get('/about', 'controllers/about.php');
 $router->get('/contact', 'controllers/contact.php');
