@@ -41,6 +41,8 @@ if ($user) {
         'email' => $email
     ];
 
+    login($user);
+
     header('location: /');
     exit();
 }
