@@ -1,0 +1,28 @@
+{
+    "name": "gaura/phpbg",
+    "autoload": {
+        "psr-4": {
+            "Gaura\\Phpbg\\": "src/",
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+
+        }
+    },
+    "authors": [
+        {
+            "name": "Gaurang Parekh",
+            "email": "gaurang9rising@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/collections": "^11.34"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
